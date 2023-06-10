@@ -19,3 +19,10 @@ I'm assembling this ansible repo so we can standardize our infrastructure with:
     
 rizin+git should be a solid integration because of their projects initiative (https://rizin.re/posts/introducing-projects/)
 
+* What's not in the box?
+#+BEGIN_SRC bash
+  mkdir group_vars
+  touch group_vars/all
+#+END_SRC
+
+assumes variable =base_git_keys= exists
