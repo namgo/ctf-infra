@@ -1,0 +1,4 @@
+---
+- hosts: collab
+  roles:
+    - role: collab

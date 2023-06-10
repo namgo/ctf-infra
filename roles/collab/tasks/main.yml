@@ -1,0 +1,32 @@
+---
+
+- name: install git
+  yum: name=git state=present
+
+- name: add git user
+  ansible.builtin.user:
+    name: git
+    shell: /usr/bin/git-shell
+
+- name: add ssh directory
+  file:
+    path: /home/git/.ssh/
+    state: directory
+    mode: 0700
+    owner: git
+    group: git
+
+- name: copy ssh keys
+  copy:
+    content: "{{ ( base_git_keys | join('\n') ) + '\n' }}"
+    dest: /home/git/.ssh/authorized_keys
+    owner: git
+    group: git
+    mode: 0600
+
+
+- name: create bins repo
+  command: git init --bare /home/git/bins.git
+  args:
+    creates: /home/git/bins.git
+  become_user: git
