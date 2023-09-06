@@ -1,5 +1,7 @@
 #+TITLE: CTF Infrastructure w/ Ansible
 
+NOTE: we all got busy with work and never went to the CTF unfortunately. I'll be working on this project next it's relevant.
+
 My friends and I are signed up to participate in a CTF. We have a little bit of previous experience, but not much!
 
 * What's in the box?
