@@ -1,30 +1,10 @@
 #+TITLE: CTF Infrastructure w/ Ansible
 
-NOTE: we all got busy with work and never went to the CTF unfortunately. I'll be working on this project next it's relevant.
+My personal home VM infrastructure for RingZer0 and similar online CTFs.
 
-My friends and I are signed up to participate in a CTF. We have a little bit of previous experience, but not much!
+(this was originally for the team I'm part of but our tooling was too different)
 
 * What's in the box?
-I'm assembling this ansible repo so we can standardize our infrastructure with:
-- self-hosted git server for collaboration
-  - this should work well for us with rizin projects!
-- linux analysis systems
-  - should contain just enough tooling to get started
-  - pwndbg for a nice gdb frontend
-  - binwalk
-  - mitmproxy for dynamic analysis
-  - reverse engineering framework (rizin + rz-cutter + rz-ghidra)
-- windows analysis system
-  - windbg
-    - I think we're going to struggle to interface with windbg as we're not using windows on our workstations...
-  - gdb on windows
-    
-rizin+git should be a solid integration because of their projects initiative (https://rizin.re/posts/introducing-projects/)
-
-* What's not in the box?
-#+BEGIN_SRC bash
-  mkdir group_vars
-  touch group_vars/all
-#+END_SRC
-
-assumes variable =base_git_keys= exists
+- Windows RE platform
+- Linux RE/solving platform
+- Samba mounts between Linux RE and Windows RE systems
