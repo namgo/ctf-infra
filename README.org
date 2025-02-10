@@ -4,7 +4,7 @@ My personal home VM infrastructure for RingZer0 and similar online CTFs.
 
 (this was originally for the team I'm part of but our tooling was too different)
 
-* What's in the box?
+* What's intended to be in the box?
 - Windows RE platform
 - Linux RE/solving platform
 - Samba mounts between Linux RE and Windows RE systems
